@@ -61,7 +61,6 @@ static PetscErrorCode exact2D_t(PetscInt dim, PetscReal time, const PetscReal x[
 {
     *u = 2.;
     return PETSC_SUCCESS;
-}];
 }
 
 static void g3_temp(PetscInt dim, PetscInt Nf, PetscInt NfAux, const PetscInt uOff[], const PetscInt uOff_x[], const PetscScalar u[], const PetscScalar u_t[], const PetscScalar u_x[], const PetscInt aOff[], const PetscInt aOff_x[], const PetscScalar a[], const PetscScalar a_t[], const PetscScalar a_x[], PetscReal t, PetscReal u_tShift, const PetscReal x[], PetscInt numConstants, const PetscScalar constants[], PetscScalar g3[])
@@ -79,7 +78,7 @@ static void g0_temp(PetscInt dim, PetscInt Nf, PetscInt NfAux, const PetscInt uO
 static PetscErrorCode SetupProblem(DM dm)
 {
     PetscFE         fe;
-    PetscInt        cStart, dim id = 1;
+    PetscInt        cStart, dim, id = 1;
     DMPolytopeType  ct;
     PetscDS         ds;
     DMLabel         label;
